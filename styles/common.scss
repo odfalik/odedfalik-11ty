@@ -15,23 +15,38 @@
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  color: #394655;
-  background: #fffef7;
-}
+  color: #ffffff;
+  background: #000000;
 
-.container {
-  margin: 40px 32%;
-  blockquote {
-    margin: 16px 0;
-    padding: 0 1em;
-    color: brown;
-    border-left: 0.25em solid;
+  .home {
+    padding: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+    grid-gap: 2em;
+
+    li.post {
+      margin-bottom: 2em;
+    }
   }
 }
 
-a {
-  text-decoration: none;
+blockquote {
+  margin: 16px 0;
+  padding: 0 1em;
   color: brown;
+  border-left: 0.25em solid;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+a {
+  color: rgb(223, 223, 223);
+
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.2);
 
   &:hover {
     cursor: pointer;
@@ -43,4 +58,14 @@ a {
   .container {
     margin: 32px 14%;
   }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+footer {
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 70%;
 }

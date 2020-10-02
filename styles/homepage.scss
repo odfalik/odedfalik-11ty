@@ -1,13 +1,9 @@
-body {
-  text-transform: lowercase;
-}
-
 .category {
   margin-top: 25px;
   margin-bottom: 10px;
 }
 
-.posts {
+.posts ul {
   list-style: none;
   .post {
     margin-top: 8px;

@@ -1,24 +1,20 @@
 {
-  "name": "eleventy-blog-mnml",
-  "version": "1.0.0",
-  "description": "A Blog Template using eleventy and terminal css.",
+  "name": "odedfalik-11ty",
+  "author": "Oded Falik (mail@odedfalik.com)",
+  "repository": "https://github.com/odfalik/odedfalik-11ty",
+  "license": "MIT",
   "scripts": {
     "build": "eleventy && npm run sass",
-    "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
-    "sass": "node-sass --output  _site/styles/ styles/",
+    "start": "concurrently \"eleventy --serve\" \"npm run sass:watch\" --kill-others",
+    "sass": "node-sass --output _site/styles/ styles/",
     "sass:watch": "npm run sass && npm run sass -- -w",
     "clean": "rm -rf _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Arpit Batra (arpitbatra123@gmail.com)",
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "concurrently": "^5.1.0",
-    "node-sass": "^4.13.1"
-  },
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "concurrently": "^5.1.0",
+    "node-sass": "^4.14.1"
   }
 }
