@@ -5,18 +5,18 @@ layout: base.liquid
 
 <div class="home">
     <h2><span class="bold">Oded</span> Falik is a software engineer based in Dallas, <br> focused on the the intersection of the Web, infosec, & AI.</h2>
-
+    
     <section class="posts">
-        <h4>What I've been up to</h4>
+        <h4>what i've been up to</h4>
         <br>
         <ul>
             {% for post in collections.posts reversed %}
                 <li class="post">
                     <span class="post-title">
                         {% if post.data.externalLink %}
-                            <a href="{{ post.data.externalLink }}" target="__blank">{{ post.data.title }}</a>
+                            <a href="{{ post.data.externalLink }}" target="__blank" class="tdu">{{ post.data.title }}</a>
                         {% else %}
-                            <a href="{{ post.url }}">{{ post.data.title }}</a>
+                            <a href="{{ post.url }}" class="tdu">{{ post.data.title }}</a>
                         {% endif %}
                     </span>
                     <span class="post-date">
@@ -27,5 +27,5 @@ layout: base.liquid
         </ul>
     </section>
 
-    {% include footer %}
+    {% include links %}
 </div>

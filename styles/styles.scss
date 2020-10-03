@@ -1,0 +1,77 @@
+$a: #343434;
+$b: #ededed;
+
+::selection, ::-moz-selection {
+  color: $b;
+  background-color: brown;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: $b;
+  color: $a;
+
+  .home {
+    padding: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+    grid-gap: 2em;
+
+    li.post {
+      margin-bottom: 2em;
+    }
+  }
+
+  .links {
+    opacity: 70%;
+    .fontello {
+      font-size: 3em;
+      display: inline-block;
+      margin-right: .5em;
+      &::before { margin: 0; }
+    }
+  }
+}
+
+blockquote {
+  margin: 16px 0;
+  padding: 0 1em;
+  color: $a;
+  border-left: 0.25em solid;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+a {
+  color: $a;
+  text-decoration: none;
+  line-height: 1.4em;
+  cursor: pointer;
+  
+  &.tdu {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    &:hover, &:focus { background-size: 100% 2px; }
+  }
+}
+
+.bold { font-weight: bold; }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $b;
+    background: $a;
+  }
+  a { color: $b; }
+}
