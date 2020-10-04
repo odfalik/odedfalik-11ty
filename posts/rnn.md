@@ -1,8 +1,9 @@
 ---
-title: 'A GRUesome Lesson: Sequential Forecasting Using Recurrent Neural Networks'
+title: 'Time Series Forecasting Using Recurrent Neural Networks'
+date: Last Modified
 ---
 
-``` js
+<!-- ``` js
 import React from "react";
 
 const Hello = () => (
@@ -11,6 +12,6 @@ const Hello = () => (
 
 export default Hello;
 
-```
+``` -->
 
 This shows an example using syntax highlighting.

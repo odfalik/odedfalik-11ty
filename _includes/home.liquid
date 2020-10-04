@@ -4,11 +4,15 @@ layout: base.liquid
 
 
 <div class="home">
-    <h2><span class="bold">Oded</span> Falik is a software engineer based in Dallas, <br> focused on the the intersection of the Web, infosec, & AI.</h2>
+    <section class="intro">
+        <h2><span class="bold">Oded</span> Falik is a software engineer based in Dallas, <br> focused on the the intersection of the Web, infosec, & AI.</h2>
+        <br>
+        {% include links %}
+    </section>
     
     <section class="posts">
-        <h4>what i've been up to</h4>
-        <br>
+        {% comment %} <h4>what i've been up to</h4>
+        <br> {% endcomment %}
         <ul>
             {% for post in collections.posts reversed %}
                 <li class="post">
@@ -27,5 +31,4 @@ layout: base.liquid
         </ul>
     </section>
 
-    {% include links %}
 </div>

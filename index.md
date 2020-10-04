@@ -1,6 +1,5 @@
 ---
 layout: home.liquid
-title: Horsin' Around
 ---
 
 ## Welcome to Hollywoo
