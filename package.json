@@ -4,7 +4,7 @@
   "repository": "https://github.com/odfalik/odedfalik-11ty",
   "license": "MIT",
   "scripts": {
-    "build": "eleventy && npm run sass",
+    "build": "npx @11ty/eleventy && npm run sass",
     "start": "concurrently \"eleventy --serve\" \"npm run sass:watch\" --kill-others",
     "sass": "node-sass --output _site/styles/ styles/",
     "sass:watch": "npm run sass && npm run sass -- -w",
