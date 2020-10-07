@@ -1,4 +1,4 @@
-$a: #343434;
+$a: #313131;
 $b: #ededed;
 $g1: #8e2de2;
 $g2: #4a00e0;
@@ -113,14 +113,14 @@ article.post {
   }
 }
 
-// @media (prefers-color-scheme: dark) {
-//   body {
-//     color: $b;
-//     background: $a;
-//   }
-//   a { color: $b; }
-//   hr { background: $b; }
-// }
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $b;
+    background: $a;
+  }
+  a { color: $b; }
+  hr { background: $b; }
+}
 
 
 .resume {
