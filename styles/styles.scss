@@ -106,13 +106,13 @@ article.post {
   }
 }
 
-// @media (prefers-color-scheme: dark) {
-//   body {
-//     color: $b;
-//     background: $a;
-//   }
-//   a { color: $b; }
-// }
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $b;
+    background: $a;
+  }
+  a { color: $b; }
+}
 
 hr {
   margin: 1em 0;
