@@ -99,6 +99,13 @@ a {
 
 .bold { font-weight: bold; }
 .tac { text-align: center; }
+hr {
+  margin: 1em 0 .5em 0;
+  border: 0;
+  height: 1px;
+  background: $a;
+  opacity: 20%;
+}
 
 article.post {
   .header {
@@ -106,23 +113,34 @@ article.post {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: $b;
-    background: $a;
-  }
-  a { color: $b; }
-}
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     color: $b;
+//     background: $a;
+//   }
+//   a { color: $b; }
+//   hr { background: $b; }
+// }
 
-hr {
-  margin: 1em 0;
-  border: 0;
-  height: 1px;
-  background: rgba(0,0,0,0.5);
-}
 
 .resume {
-  hr { margin: 1em 0; }
-  h2 { font-size: 1em; }
-  h3 { font-weight: lighter; }
+  margin: auto;
+  max-width: 50em;
+  font-size: 0.9em;
+  hr { margin: 1em 25%; }
+  h2 { font-size: 110%; }
+  h3 { font-weight: lighter; font-size: 100%; }
+  ul { list-style-type: circle; margin-left: 1.5em; }
+  .subtitle { text-transform: uppercase; opacity: 75%; font-size: 85%; margin-bottom: 0.5em; }
+
+  small.info { text-align: center; opacity: 75%; text-transform: uppercase; }
+
+  .section {
+    > h2 { text-align: center; margin-bottom: 0.5em; }
+    .entry {
+      margin-bottom: 1em;
+      > h3 { margin-bottom: 0.1em; }
+    
+    }
+  }
 }
