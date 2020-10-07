@@ -23,7 +23,13 @@ body {
   background-color: $b;
   color: $a;
 
-  > main { padding: 4em; }
+  > main { 
+    padding: 4em;
+
+    @media (max-width: 1000px) {
+      padding: 2em;
+    }
+  }
 
   .home {
     display: grid;
@@ -92,8 +98,8 @@ a {
   > a {
     margin-right: 1em;
     svg {
-      height: 2em;
-      width: 2em;
+      height:   2.5em;
+      width:    2.5em;
     }
   }
 }
