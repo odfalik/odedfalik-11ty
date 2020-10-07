@@ -62,7 +62,7 @@ blockquote {
   border-left: 0.25em solid;
 }
 
-h2 {
+h2.herotype {
   font-size: 3em;
   font-weight: lighter;
 }
@@ -98,19 +98,31 @@ a {
 }
 
 .bold { font-weight: bold; }
+.tac { text-align: center; }
 
 article.post {
   .header {
     margin-bottom: 2em;
   }
-
-
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: $b;
-    background: $a;
-  }
-  a { color: $b; }
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     color: $b;
+//     background: $a;
+//   }
+//   a { color: $b; }
+// }
+
+hr {
+  margin: 1em 0;
+  border: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.5);
+}
+
+.resume {
+  hr { margin: 1em 0; }
+  h2 { font-size: 1em; }
+  h3 { font-weight: lighter; }
 }
