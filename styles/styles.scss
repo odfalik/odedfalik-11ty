@@ -73,14 +73,14 @@ a {
   line-height: 1.4em;
   cursor: pointer;
   
-  &.tdu {
-    background-image: $g;
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-    &:hover, &:focus { background-size: 100% 2px; }
-  }
+}
+.tdu {
+  background-image: $g;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+  &:hover, &:focus { background-size: 100% 2px; }
 }
 
 .post-date {
@@ -88,13 +88,14 @@ a {
   opacity: 60%;
 }
 
-.fontello:hover {
-  background-image: $g;
-  // background: -webkit-linear-gradient(#eee, #333);
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.links {
+  > a {
+    margin-right: 1em;
+    svg {
+      height: 2em;
+      width: 2em;
+    }
+  }
 }
 
 .bold { font-weight: bold; }
@@ -140,7 +141,6 @@ article.post {
     .entry {
       margin-bottom: 1em;
       > h3 { margin-bottom: 0.1em; }
-    
     }
   }
 }

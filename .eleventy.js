@@ -2,6 +2,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight"), markdo
 module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy('_redirects');
   const options = {
     html: true,
     breaks: true,
