@@ -5,18 +5,18 @@ layout: base.liquid
 
 <div class="home">
     <section class="intro">
-        <h2 class="herotype"><span class="bold">Oded</span> Falik is a software engineer based in Dallas, <br> focused on the the intersection of the Web, infosec, & ML.</h2>
+        <h1 class="herotype"><span class="bold">Oded</span> Falik is a software engineer based in Dallas, focused on the the intersection of the <span class="bold">Web, infosec, & ML</span></h1>
+        <br>
         <br>
         {% include links %}
     </section>
     
     <section class="posts">
-        {% comment %} <h4>what i've been up to</h4>
-        <br> {% endcomment %}
+        {% comment %} <h4>what I do</h4> <br> {% endcomment %}
 
-        <p>more coming soon...</p>
-        {% comment %} <ul>
+        <ul>
             {% for post in collections.posts reversed %}
+            {% if post.data.hidden != true %}
                 <li class="post">
                     <span class="post-title">
                         {% if post.data.externalLink %}
@@ -29,8 +29,9 @@ layout: base.liquid
                         {{ post.date | date: "%b %Y" | downcase }}
                     </span>
                 </li>
+            {% endif %}
             {% endfor %}
-        </ul> {% endcomment %}
+        </ul>
     </section>
 
 </div>

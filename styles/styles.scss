@@ -23,41 +23,43 @@ body {
   background-color: $b;
   color: $a;
 
+  margin: auto;
+  max-width: 50em;
+
   > main { 
     padding: 4em;
 
     @media (max-width: 1000px) {
       padding: 2em;
     }
+
+    .back {
+      position: fixed;
+      top: 1em;
+      right: 1em;
+      opacity: 50%;
+      &:hover { opacity: 100%; }
+    }
+
+    overflow-x: hidden;
   }
 
   .home {
-    display: grid;
+    // display: grid;
     // grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
-    grid-template-columns: 1fr 2fr;
-    @media screen and (max-width: 1000px) { grid-template-columns: 1fr; }
-
-    grid-gap: 2em;
+    // grid-template-columns: 1fr 2fr;
+    // grid-gap: 2em;
+    // @media screen and (max-width: 1000px) { grid-template-columns: 1fr; }
 
     > section.posts {
       margin-top: 1em;
-      // text-align: right;
+      text-align: right;
 
       li.post {
         margin-bottom: 2em;
       }
     }
 
-  }
-
-  .links {
-    opacity: 70%;
-    .fontello {
-      font-size: 3em;
-      display: inline-block;
-      margin-right: .5em;
-      &::before { margin: 0; }
-    }
   }
 }
 
@@ -68,9 +70,14 @@ blockquote {
   border-left: 0.25em solid;
 }
 
-h2.herotype {
-  font-size: 3em;
+.herotype {
+  font-size: 2.25em;
   font-weight: lighter;
+  // text-align: justify;
+
+  span.bold {
+    font-size: 1.1em;
+  }
 }
 
 a {
@@ -78,6 +85,13 @@ a {
   text-decoration: none;
   line-height: 1.4em;
   cursor: pointer;
+
+  &:not(.tdu) {
+    transition: all 0.2s;
+    &:hover {
+      color: $g1;
+    }
+  }
 }
 
 .tdu {
@@ -95,20 +109,25 @@ a {
 }
 
 .links {
+  opacity: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+  justify-content: space-between;
   > a {
-    margin-right: 1em;
     svg {
       height:   2.5em;
       width:    2.5em;
+      transition: all 0.2s;
     }
-    &:hover svg, &:focus svg {
-      stroke: $g1;
-    }
+    &:hover svg, &:focus svg { stroke: $g1; }
   }
 }
 
 .bold { font-weight: bold; }
 .tac { text-align: center; }
+.dib { display: inline-block; }
 hr {
   margin: 1em 0 .5em 0;
   border: 0;
@@ -120,6 +139,29 @@ hr {
 article.post {
   .header {
     margin-bottom: 2em;
+
+    ul.topics {
+      display: flex;
+      flex-wrap: wrap;
+      text-transform: uppercase;
+      opacity: 50%;
+      font-size: 0.9em;
+      li { margin-right: 1.5em; }
+    }
+  }
+
+  img {
+    margin: 2em auto;
+  }
+
+  // Select all text wrapped in `` in markdown - generated a `code` tag without a language class
+  // why? wish I knew
+  code:not([class*="language-"]) {
+    padding: 0.2em;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background: #f8f8f8;
+    border: 1px solid #dddddd;
   }
 }
 
@@ -130,6 +172,10 @@ article.post {
   }
   a { color: $b; }
   hr { background: $b; }
+}
+
+@media print {
+  .hide-print { display: none; }
 }
 
 

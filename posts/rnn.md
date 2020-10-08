@@ -1,6 +1,7 @@
 ---
-title: 'Time Series Forecasting Using Recurrent Neural Networks'
-date: Last Modified
+title: 'Time Series Forecasting Using RNNs'
+date: '2020-08-09'
+hidden: true
 ---
 
 <!-- ``` js
@@ -14,4 +15,4 @@ export default Hello;
 
 ``` -->
 
-This shows an example using syntax highlighting.
+

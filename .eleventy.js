@@ -3,6 +3,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('_redirects');
+  eleventyConfig.addPassthroughCopy("posts/**/*.png");
+  eleventyConfig.addPassthroughCopy("posts/**/*.jpg");
   const options = {
     html: true,
     breaks: true,
