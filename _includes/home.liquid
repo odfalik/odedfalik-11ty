@@ -2,8 +2,20 @@
 layout: base.liquid
 ---
 
-
 <div class="home">
+
+    {% comment %} <canvas id="canvas" width="1024" height="1024">Error, canvas is not supported</canvas>
+    <script type="text/javascript">
+        function draw() {
+            var c = document.getElementById('canvas');
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+        }
+        draw();
+    </script> {% endcomment %}
+
     <section class="intro">
         <h1 class="herotype"><span class="bold">Oded</span> Falik is a software engineer based in Dallas, focused on the the intersection of the <span class="bold">Web, infosec, & ML</span></h1>
         <br>

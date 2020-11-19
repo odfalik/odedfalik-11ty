@@ -4,7 +4,13 @@ layout: base.liquid
 
 <article class="post">
   <div class="header">
-    <h1 class="herotype">{{ title }}</h1>
+    <h1 class="herotype">
+      {{ title }}
+
+      {% if date %}
+        <p class="post-date">{{ date | date: "%b %Y" | downcase }}</p>
+      {% endif %}
+    </h1>
 
     <ul class="topics">
       {% for tag in topics %}
@@ -12,14 +18,12 @@ layout: base.liquid
       {% endfor %}
     </ul>
 
-    {% if date %}
-      <p class="post-date">{{ date | date: "%b %Y" | downcase }}</p>
-    {% endif %}
-
-    {% if github %}
-      <br>
-      <a href="{{ github }}" target="_blank">View On Github</a>
-    {% endif %}
+    <ul class="links">
+      {% if github %}
+        <li class="link"><a href="{{ github }}" target="_blank" class="tdu">View On Github</a></li>
+      {% endif %}
+    </ul>
+    
   </div>
 
   <div class='content'>{{ content }}</div>
